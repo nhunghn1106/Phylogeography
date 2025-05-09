@@ -1,0 +1,61 @@
+---
+title: "R_reproducibility"
+author: "Nhung"
+date: "2025-04-01"
+output: html_document
+---
+
+```{r setup, include = FALSE}
+
+# required packages for reproducibility in R
+library(here)
+library(renv)
+library(rticles)
+library(devtools)
+library(roxygen2)
+library(gitcreds)
+
+library(rrtools)
+library(tinytex)
+library(usethis)
+
+# test the configuration for git/github/Rstudio
+usethis::gh_token_help()
+usethis::git_sitrep()
+
+```
+## Reproducibility (for research findings)
+
+*Reproducibility means obtaining the same result by someone else given the same data and code.*
+
+Robustness (durableness) means obtaining the same result from the same data using a different method. Exp: using different stats method on the same data to have the same conclusion on a hypothesis.
+
+Replicability (of a research finding on different datasets) means obtaining the same result from an independent dataset using the same method. Exp: using the same bioinformatic pipeline on different datasets to achieve a same cataloge of mutations for Mtb.
+
+Note for "here" package to make portable paths: to create absolute paths which runs the codes from paths that are relative to the root directory (a way to declare where the root directory is), using in 2 situations: 
+
+(1) to fix the inconsistency of root directory during knit as knitting will automatically define the root working directory being the location of the knitted file, so here:here() will help to redefine the root directory by providing its relative path; 
+
+(2) working with a script not inside the current project, so here::i_am() function will help to declare the relative path of the scritp to the its root project.
+
+```{r }
+
+```
+
+
+
+
+
+```{r cars, echo = FALSE}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
