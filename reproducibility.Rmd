@@ -39,7 +39,7 @@ Note for "here" package to make portable paths: to create absolute paths which r
 (2) working with a script not inside the current project, so here::i_am() function will help to declare the relative path of the scritp to the its root project.
 
 ```{r }
-
+# testing
 ```
 
 
