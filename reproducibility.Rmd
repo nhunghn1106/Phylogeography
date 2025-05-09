@@ -20,6 +20,7 @@ library(tinytex)
 library(usethis)
 
 # test the configuration for git/github/Rstudio
+usethis::create_github_token() 
 gitcreds::gitcreds_set()
 usethis::gh_token_help()
 usethis::git_sitrep()
