@@ -40,7 +40,14 @@ Note for "here" package to make portable paths: to create absolute paths which r
 
 (2) working with a script not inside the current project, so here::i_am() function will help to declare the relative path of the scritp to the its root project.
 
-```{r }
+```{r compendium}
+# first create a git-managed repo
+rrtools::use_compendium(simple = FALSE)
+rrtools::add_dependencies_to_description()
+usethis::use_mit_license(copyright_holder = "Nhung")
+rrtools::use_readme_qmd()
+rrtools::use_analysis()
+
 
 ```
 
